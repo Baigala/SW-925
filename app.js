@@ -127,3 +127,66 @@ talbai = PiToo * r * r;
 // if (14 === 14 && 15 === 15) {
 //   console.log("ok.");
 // }
+
+// 1.11 loop, backtick, x += 5;, x++, \n
+// for loop
+// baktick - ``
+// for(ehleliinTseg;Nohtsol;Tooluur){
+// ajillah ystoi code.
+// }
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+// for (var i = 1; i <= 5; i++) {
+//   if (i % 2 == 0) {
+//     console.log(`${i}   tegsh too bna.`);
+//   } else {
+//     console.log(i + " sondgoi too bna.");
+//   }
+// }
+// while
+// var i = 0;
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
+// do while
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= -1);
+
+// Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үржвэрийг хэвлэх, 1000-с бага бол нийлбэрийг хэвлэ.
+// var too1 = +prompt("ehnii too");
+// var too2 = +prompt("daraah too");
+// if (too1 * too2 > 1000) {
+//   console.log(too1 * too2);
+// } else if (too1 * too2 < 1000) {
+//   console.log(too1 + too2);
+// }
+// 10 хүртэл давталт хийж, тоо тус бүрийг бүх өмнөх тооны нийлбэртэй консолд хэвлэнэ үү.
+var niilber = 0;
+for (var i = 1; i <= 10; i++) {
+  niilber += i;
+  console.log(`${i} hurtelh niilber:    ${niilber}`);
+  //   console.log(i + " hurtelh niilber:     " + niilber);
+}
+var x = 4;
+x++; // i = i + 1;
+x--; // i = i - 1;
+x = x + 5;
+x += 5;
+x *= 2;
+x + 5;
+x -= 10;
+
+// console.log("aaa\nbbb");
+// alert("aaa\n1111121");
+// *****
+var str = "";
+for (var i = 1; i <= 5; i++) {
+  str += "*";
+}
+console.log(str);
