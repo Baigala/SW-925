@@ -167,26 +167,112 @@ talbai = PiToo * r * r;
 //   console.log(too1 + too2);
 // }
 // 10 хүртэл давталт хийж, тоо тус бүрийг бүх өмнөх тооны нийлбэртэй консолд хэвлэнэ үү.
-var niilber = 0;
-for (var i = 1; i <= 10; i++) {
-  niilber += i;
-  console.log(`${i} hurtelh niilber:    ${niilber}`);
-  //   console.log(i + " hurtelh niilber:     " + niilber);
-}
-var x = 4;
-x++; // i = i + 1;
-x--; // i = i - 1;
-x = x + 5;
-x += 5;
-x *= 2;
-x + 5;
-x -= 10;
+// var niilber = 0;
+// for (var i = 1; i <= 10; i++) {
+//   niilber += i;
+//   console.log(`${i} hurtelh niilber:    ${niilber}`);
+//   //   console.log(i + " hurtelh niilber:     " + niilber);
+// }
+// var x = 4;
+// x++; // i = i + 1;
+// x--; // i = i - 1;
+// x = x + 5;
+// x += 5;
+// x *= 2;
+// x + 5;
+// x -= 10;
 
 // console.log("aaa\nbbb");
 // alert("aaa\n1111121");
 // *****
-var str = "";
-for (var i = 1; i <= 5; i++) {
-  str += "*";
+// var str = "";
+// for (var i = 1; i <= 5; i++) {
+//   str += "*";
+// }
+// console.log(str);
+
+// 01.13 function
+// parameter, argument
+// function-ii 2 torol(void, return hdg)
+// Function - oo zarlaj bna.
+// void function
+// function printInfo(ner, age) {
+//   console.log("This person's name is: " + ner + " ,ene hunii nas: " + age);
+// }
+// Function - oo ajilluulah.
+// printInfo("Sid", 23);
+// printInfo("Alice", 25);
+// printInfo("Henry", 40);
+
+// void(uildel hdg) nemeh function:
+// function nemeh1(too1, too2) {
+//   var niilber = too1 + too2;
+//   console.log(niilber);
+// }
+// nemeh1(9, 7);
+
+// return hdg nemeh function:
+// function nemeh(too1, too2) {
+//   var niilber = too1 + too2;
+//   return too1;
+// }
+// console.log(4);
+// console.log(nemeh(1, 3));
+// var x = nemeh(5, 8) * 2;
+// console.log(x);
+
+// var ner = "Grisha";
+// var mergejil = "togooch";
+
+// if (mergejil === "marketing manager") {
+//   console.log(ner + " poster hdg.");
+// } else if (mergejil === "togooch") {
+//   console.log(ner + " hool hdg.");
+// } else if (mergejil === "bagsh") {
+//   console.log(ner + " hicheel zaadag.");
+// } else {
+//   console.log("iim mergejil medehgui.");
+// }
+
+// var ner1 = "Gizmo";
+// var mergejil1 = "marketing manager";
+
+// if (mergejil1 === "marketing manager") {
+//   console.log(ner1 + " poster hdg.");
+// } else if (mergejil1 === "togooch") {
+//   console.log(ner1 + " hool hdg.");
+// } else if (mergejil1 === "bagsh") {
+//   console.log(ner1 + " hicheel zaadag.");
+// } else {
+//   console.log("iim mergejil medehgui.");
+// }
+
+function mergejilTodorhoiloh(ner, mergejil) {
+  if (mergejil === "marketing manager") {
+    console.log(ner + " poster hdg.");
+  } else if (mergejil === "togooch") {
+    console.log(ner + " hool hdg.");
+  } else if (mergejil === "bagsh") {
+    console.log(ner + " hicheel zaadag.");
+  } else {
+    console.log("iim mergejil medehgui.");
+  }
 }
-console.log(str);
+// x = "bagsh";
+// mergejilTodorhoiloh("Dulmaa", x);
+// mergejilTodorhoiloh("Bold", "marketing manager");
+// mergejilTodorhoiloh("Bold", "marketing manager");
+// mergejilTodorhoiloh("Bold", "marketing manager");
+// mergejilTodorhoiloh("Bold", "marketing manager");
+// mergejilTodorhoiloh("Bold", "marketing manager");
+
+// Function && return ashiglaj bodoh:
+/* Дасгал:
+2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үрвэрийг буцааж, 1000-с бага бол нийлбэрийг буцаа */
+
+/* Дасгал:
+ Тоо өгөгдсөн бол тухайн тоо хүртэлх нийлбэрүүүдийг олж буцаа. */
+
+/* Дасгал:
+Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг олж буцаа.
+томьёо: (суурь * өндөр) / 2 */
