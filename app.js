@@ -307,17 +307,124 @@ var lastElement = arr[arr.length - 1];
 // Функц ашиглаж бодно.
 /*Дасгал №1:
  Өгөгдсөн массив дотроос 5-д хуваагддаг тоонуудын нийлбэрийг олж буцаа */
-
+function bodlogo1(arr) {
+  var niilber = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 5 === 0) {
+      niilber += arr[i];
+    }
+  }
+  return niilber;
+}
+// console.log(bodlogo1([2, 5, 10]));
 /*Дасгал №2:
  Өгөгдсөн массивын эхний болон сүүлийн элемент тэнцүү бол true, үгүй бол false буцаа */
-
+function bodlogo2(arr) {
+  var hariu;
+  if (arr[0] === arr[arr.length - 1]) {
+    hariu = true;
+  } else {
+    hariu = false;
+  }
+  return hariu;
+}
+// console.log(bodlogo2([1, 2, 3, 1]));
 /* Дасгал №3:
 Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
+function bodlogo3(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (i % 2 == 0) {
+      console.log(str[i]);
+    }
+  }
+}
+// bodlogo3("asdfgh");
 
 /* Дасгал №4:
 Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
 [4, 5, 2, 9, 2]; ==> онцгой массив */
+function bodlogo4(arr) {
+  var count = 0;
+  var hariu = false;
+  for (var i = 0; i < arr.length; i++) {
+    if ((i % 2 == 0 && arr[i] % 2 == 0) || (i % 2 == 1 && arr[i] % 2 == 1)) {
+      count++;
+    }
+  }
+  if (count == arr.length) {
+    hariu = true;
+  }
+  return hariu;
+}
+console.log(bodlogo4([2, 4, 2]));
 
 /* Дасгал №5:
 string төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
 string төрлийн тоо ==> "1258" */
+function bodlogo5(str) {
+  var sondgoiToonuudiinNiilber = 0;
+  var tegshToonuudiinNiilber = 0;
+  var hariu;
+  for (var i = 0; i < str.length; i++) {
+    if (+str[i] % 2 == 0) {
+      tegshToonuudiinNiilber += +str[i];
+    } else if (+str[i] % 2 == 1) {
+      sondgoiToonuudiinNiilber += +str[i];
+    }
+  }
+  if (tegshToonuudiinNiilber > sondgoiToonuudiinNiilber) {
+    hariu = "tegsh toonuudiin niilber ih bna.";
+  } else if (sondgoiToonuudiinNiilber > tegshToonuudiinNiilber) {
+    hariu = "sondgoi toonuudiin niilber ih.";
+  } else {
+    hariu = "tentsuu";
+  }
+  return hariu;
+}
+console.log(bodlogo5("1694"));
+
+/* Дасгал №6: Массиваас element устгадаг функц бич. */
+function bodlogo6(arr, ustgahElement) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === ustgahElement) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+console.log(bodlogo6([1, 3, 4, 5], 3));
+/*Дасгал №7
+Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа.*/
+function bodlogo7(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length - 1; i++) {
+    sum += arr[i];
+  }
+  if (sum === arr[arr.length - 1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(bodlogo7([1, 2, 3, 4, 10]));
+/* Дасгал №8
+ Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
+function bodlogo8(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+console.log(bodlogo8(["4", 8, 10, "2", 9]));
+
+/* Дасгал №9
+Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
+
+/* Дасгал №10
+ Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
+
+/* Дасгал №11
+ Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
