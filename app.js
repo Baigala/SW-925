@@ -356,7 +356,7 @@ function bodlogo4(arr) {
   }
   return hariu;
 }
-console.log(bodlogo4([2, 4, 2]));
+// console.log(bodlogo4([2, 4, 2]));
 
 /* Дасгал №5:
 string төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
@@ -381,7 +381,7 @@ function bodlogo5(str) {
   }
   return hariu;
 }
-console.log(bodlogo5("1694"));
+// console.log(bodlogo5("1694"));
 
 /* Дасгал №6: Массиваас element устгадаг функц бич. */
 function bodlogo6(arr, ustgahElement) {
@@ -392,7 +392,7 @@ function bodlogo6(arr, ustgahElement) {
   }
   return arr;
 }
-console.log(bodlogo6([1, 3, 4, 5], 3));
+// console.log(bodlogo6([1, 3, 4, 5], 3));
 /*Дасгал №7
 Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа.*/
 function bodlogo7(arr) {
@@ -406,7 +406,7 @@ function bodlogo7(arr) {
     return false;
   }
 }
-console.log(bodlogo7([1, 2, 3, 4, 10]));
+// console.log(bodlogo7([1, 2, 3, 4, 10]));
 /* Дасгал №8
  Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
 function bodlogo8(arr) {
@@ -418,13 +418,389 @@ function bodlogo8(arr) {
   }
   return sum;
 }
-console.log(bodlogo8(["4", 8, 10, "2", 9]));
+// console.log(bodlogo8(["4", 8, 10, "2", 9]));
 
 /* Дасгал №9
 Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
-
+function bodlogo9(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i] * i;
+  }
+  return sum;
+}
+// console.log(bodlogo9([1, 2]));
 /* Дасгал №10
  Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
+function dasgal10(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == true) {
+      sum++;
+    }
+  }
+  return sum;
+}
+// console.log(dasgal10([true, false, true, true]));
 
 /* Дасгал №11
  Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
+function dasgal11(arr, index) {
+  var a = arr.split("");
+  console.log(a);
+  a.splice(0, index);
+  console.log(a);
+  var b = a.join("");
+  return b;
+}
+// console.log(dasgal11("hha", 2));
+
+// object
+// string, number, object, function
+// this - zaagch shiree.une === this.une
+// var shiree = {
+//   ongo: "tsagaan",
+//   une: 150000,
+//   hemjee: {
+//     ondor: "1m",
+//     orgon: "50cm",
+//   },
+//   hayag: "BGD bla bla",
+//   taniltsuulga() {
+//     console.log(this.une + " unetei shiree bna.");
+//   },
+// };
+// console.log("Bi " + shiree.ongo + " ongotoi shiree awlaa.");
+// console.log(shiree.hemjee.orgon);
+// shiree.taniltsuulga();
+
+/* Дасгал №12
+ner, dugaar, email 3-н property-tai student1, student2, student3, student4, student5 objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consold hewle.*/
+// var student1 = {
+//   ner: "student1",
+//   dugaar: 11111111,
+//   email: "a@gmail.com",
+// };
+// var student2 = {
+//   ner: "student2",
+//   dugaar: 11111111,
+//   email: "b@gmail.com",
+// };
+// var student3 = {
+//   ner: "student3",
+//   dugaar: 11111111,
+//   email: "c@gmail.com",
+// };
+// var student4 = {
+//   ner: "student4",
+//   dugaar: 11111111,
+//   email: "d@gmail.com",
+// };
+// var student5 = {
+//   ner: "student5",
+//   dugaar: 11111111,
+//   email: "f@gmail.com",
+// };
+// var arrStudents = [student1, student2, student3, student4, student5];
+// var email = prompt("emailee oruulna uu");
+// var oldson = false;
+// if (email !== null) {
+//   for (var i = 0; i < arrStudents.length; i++) {
+//     if (arrStudents[i].email == email) {
+//       console.log(arrStudents[i]);
+//       oldson = true;
+//     }
+//   }
+// } else {
+//   console.log("emailee oruulaagui bna.");
+// }
+// if (oldson == false) {
+//   console.log("iim emailtai hereglech alga.");
+// }
+
+/* Дасгал №13
+3 хайрцагны урт, өргөн болон өндрийн хэмжээг агуулсан массив өгөгджээ. нийт хайрцагнуудын эзэлхүүнүүдийг буцаа. */
+// function bodlogo13(arr) {
+//   var urjwer = 1;
+//   var niilber = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     urjwer = 1;
+//     for (var j = 0; j < arr[i].length; j++) {
+//       urjwer *= arr[i][j];
+//     }
+//     niilber += urjwer;
+//   }
+//   return niilber;
+// }
+
+// console.log(
+//   bodlogo13([
+//     [1, 2, 3],
+//     [2, 3, 5],
+//     [4, 5, 6],
+//   ])
+// );
+
+// for in dawtalt
+// var myArr = ["a", "b", "c", "d"];
+// for (var el in myArr) {
+//   console.log(myArr[el]);
+// }
+/* Дасгал №14:
+Books object доторх номнуудаар for in давталт ашиглан давталт хийгээд read property ni false номнуудыг console-д хэвлэ. */
+
+// var books = {
+//   book1: {
+//     author: "Preeti Shenoy",
+//     bookName: "A Place Called Home",
+//     read: false,
+//   },
+//   book2: {
+//     author: "Geetanjali Shree’s",
+//     bookName: "Tomb of Sand",
+//     read: true,
+//   },
+//   book3: {
+//     author: "Harish Mehta",
+//     bookName: "The Maverick Effect",
+//     read: false,
+//   },
+// };
+
+// for (var el in books) {
+//   if (books[el].read == false) {
+//     console.log(books[el]);
+//   }
+// }
+
+/* Дасгал №15. 2 ширхэг массив өгөгдсөн бол эхний массиваас зөвхөн сондгой, 2 дахь массиваас зөвхөн тэгш утгуудыг агуулсан шинэ массив үүсгэж буцаа. */
+
+/* Дасгал №16. Object авдаг function бичиж, keys болон value тус тусад нь салгаж буцаах функц бич. */
+
+/* Дасгал №17
+Бүхэл тооны массив мөн тоо өгөгдсөн бол тухайн тооны нийлбэр болох 2 тооны индексийг arr дотроос хайж олоод индексүүдийг нь буцаах функц бич.
+Жишээ нь:
+Өгөгдсөн arr = [2, 7, 11, 15], target = 9,
+nums[0] + nums[1] = 2 + 7 = 9 учир [0, 1] буцаагдана. */
+
+/* Дасгал №18. Өгөгдсөн тоог палиндром эсэхийг шалгах функц бич */
+const ar = [1, 2, 3, 4];
+var sum = 0;
+for (var number of ar) {
+  sum += number;
+}
+average = sum / ar.length;
+// console.log(average);
+
+/*2023.01.25 Сэдэв: es6 нэмэлтүүд */
+/* №1. let, const */
+/* let түлхүүр үг ашиглан зарласан хувьсагчийг нэг орчинд дахиж зарлаж өгж болохгүй. */
+/* var түлхүүр үг ашиглан зарласан хувьсагч function дотроо хүчинтэй бол let -> block haalt дотроо хүчинтэй блокон хаалтнаас гадна дуудвал is not defined болсон байна. */
+// let x = 4;
+// let x = 6;
+// var z = 5;
+// var z = 6;
+// function dsfa() {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   console.log(i);
+// }
+// dsfa();
+/* const түлхүүр үг ашиглан зарласан хувьсагч доторх анхны утгыг нь өөрчилж болохгүй. Жишээ нь: Хүний овог нэр хадгалах, html таг барьж авах.*/
+// const ner = "Baigal";
+// ner = "dafd";
+// const too123 = 123;
+// too123++;
+// console.log(too123);
+
+// `` - backtick;// var age = 10;
+// console.log("Minii nas bol: " + age);
+// console.log(`Minii nas bol: ${age}`);
+
+/* №2. object дээрх нэмэлтүүд */
+// object-ийн function-ийг method гэж дуудна.
+// es6 дээр method-ийн : function түлхүүр үгийг нь хаяж бичнэ.
+// const person1 = {
+//   name: "Baigal",
+//   walk: function () {
+//     console.log(`${this.name} walking`);
+//   },
+//   talk() {
+//     console.log("talks");
+//   },
+// };
+// person1.talk();
+
+// №3. arrow functions - суман функц нь es6-c гарж ирсэн функцыг бичих илүү товч хялбар бичиглэл юм.
+// function-ийг зарлаж өгөхдөө ашигладаг function түлхүүр үгийг нь хасаад суман функц гэдгийн илэрхийлэхийн тулд => зааж өгнө. Хэрвээ ганц parameterын утгатай байхын бол ()хаалтыг авахгүй байж болно. Мөн блокон хаалт дотор ганц мөртөй код байхаар бол return түлхүүр үг мөн {} ийг нь бичихгүй байж болно.
+// Жишээ 1:
+// const zeregtDewshuul1 = function (number) {
+//   return number * number;
+// };
+// const zeregtDewshuul2 = (number) => number * number;
+// setTimeout(() => {
+//   console.log("fadsfdf");
+// }, 1000);
+// // // Жишээ 2:
+// const books12 = [
+//   { id: 1, isRead: true },
+//   { id: 2, isRead: false },
+//   { id: 3, isRead: true },
+//   { id: 4, isRead: false },
+// ];
+// const unshsanNom1 = books12.filter(function (book) {
+//   return book.isRead;
+// });
+// const unshsanNom2 = books12.filter((book) => book.isRead);
+
+// №4. arrow functions and this
+// Callback functions оbject-ийн функцдээ орохгүй байгаа учир this нь window object-ийг зааж байна.
+// function e() {
+//   console.log(this); // window
+// }
+// const person7 = {
+//   name: "Baigal",
+//   printThis() {
+//     console.log(this);
+//     function ee() {
+//       console.log(this);
+//     }
+//     ee();
+//   },
+// };
+// person7.printThis();
+
+// const person2 = {
+//   talk() {
+//     setTimeout(function () {
+//       console.log("----");
+//       console.log("this ===>", this);
+//     }, 2000);
+//   },
+// };
+// person2.talk();
+
+// Callback function дотор гаднах обьектээ заадаг болгох нь:
+// const person3 = {
+//   talk() {
+//     var self = this;
+//     setTimeout(function () {
+//       console.log("----");
+//       console.log("self ===>", self);
+//     }, 1000);
+//   },
+// };
+// person3.talk();
+// setTimeout function доторх callback function ийг arrow function-оор сольж үзье.
+// const person4 = {
+//   talk() {
+//     setTimeout(() => {
+//       console.log("----");
+//       console.log("arrow function доторх this ===>", this);
+//     }, 3000);
+//   },
+// };
+
+/* №5. Array-тай ажилладаг нэмэлт функцууд*/
+// map - new array үүсгэнэ.
+const colors = ["red", "green", "blue"];
+
+const arr1 = colors.map((color) => "Энэ бол ийм өнгө: " + color);
+
+const arr2 = colors.map(function (el) {
+  return "Ene bol: " + el;
+});
+console.log(arr2);
+
+// forEach
+const arr3 = ["a", "b", "c"];
+
+arr3.forEach(function (element) {
+  if (element == "a") {
+    console.log(element);
+  }
+});
+arr3.forEach((el) => {
+  console.log(el);
+});
+for (var i = 0; i < arr3.length; i++) {
+  console.log(arr3[i]);
+}
+// filter
+// const words = [
+//   "spray",
+//   "limit",
+//   "elite",
+//   "exuberant",
+//   "destruction",
+//   "present",
+// ];
+// const result = words.filter((word) => word.length > 6);
+// console.log(result);
+// console.log(words);
+// // find
+// const arr3a = [5, 12, 8, 130, 44];
+// const found = arr3a.find((element) => element > 10);
+// console.log(found);
+
+// // findIndex
+// const arr4 = [5, 12, 8, 130, 44];
+// console.log(arr4.findIndex((element) => element > 13));
+
+// // indexOf
+// const beasts = ["ant", "bison", "aa", "duck", "bison"];
+// console.log(beasts.indexOf("bison"));
+// console.log(beasts.indexOf("bison", 2));
+// console.log(beasts.indexOf("giraffe"));
+
+// //join
+// const elements = ["Fire", "Air", "Water"];
+// console.log(elements.join());
+// console.log(elements.join(""));
+// console.log(elements.join("+"));
+
+//some
+// const arr6 = [1, 1, 3, 5, 5];
+// console.log(arr6.some((element) => element % 2 === 0));
+
+//every
+// const arr7 = [1, 30, 4, 29, 50, 13];
+// console.log(arr7.every((currentValue) => currentValue < 40));
+
+// // №6. object destructuring
+const geriinHayag = {
+  uls: "Монгол",
+  hot: "УБ",
+  duureg: "БГД",
+};
+
+// const uls = geriinHayag.uls;
+// const hot = geriinHayag.hot;
+// const duureg = geriinHayag.duureg;
+// дээрх байдлаар хандаж хувьсагчинд хадгалсныг destructuring ашиглан доорх байдлаар бичнэ.
+// const { uls, hot, duureg } = geriinHayag;
+// const { uls: country } = geriinHayag;
+
+// №7. Spread Operator
+const first = [1, 2, 3, 5];
+const second = [4, 5, 6];
+const negtgesenMassiv = first.concat(second);
+const spreadOperatorAshiglajNegtgesen = [...first, 4, 8, ...second];
+// Object дээр spread operator хэрэглэх нь:
+const toirog = {
+  radius: 10,
+  zuzaan: "10cm",
+};
+
+const ongotoiToirog = {
+  ...toirog,
+  color: "black",
+};
+
+console.log(ongotoiToirog);
+
+// Дараа үзэх es6 нэмэлтүүд
+// Classes;
+// Promise;
+// Module
