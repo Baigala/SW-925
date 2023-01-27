@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="myInput" class="inputt red big" type="text" />
+    <p class="pTag">sdf</p>
+    <p class="pTag">df</p>
+    <p class="pTag">dd</p>
+    <p class="pTag">ff</p>
+    <p class="pTag">rterh</p>
+    <!-- Дасгал ажил №1 -->
+    <!-- Тэкст болон өнгөний input-ийн value-г авч container дотор тухайн өнгө болон тэксттэй шинэ p-таг үүсгэнэ үү-->
+    <h3>Dasgal 1</h3>
+    <input id="text" type="text" placeholder="text" />
+    <input id="color" type="color" />
+    <input type="button" value="Insert" onclick="insertTextValue()" />
+    <div class="container"></div>
+    <script>
+      // getElementById(), querySelector(), querySelectorAll()
+      // tagiig const tulhuur ug ashiglaj zarlasan huwisagchin dotor hadgalna.
+      //   getElementById()
+      const input = document.getElementById("myInput");
+      console.log(input);
+      //   querySelector()
+      const input1 = document.querySelector(".inputt");
+      const input2 = document.querySelector("#myInput");
+      //   querySelectorAll()
+      const pTags = document.querySelectorAll(".pTag");
+      // style ruu handah
+      // CamelCase => background-color -> backgroundColor, grid-template-rows ->
+      //   gridTemplateRows
+      input.style.borderColor = "red";
+      pTags.forEach(function (el, i, arr) {
+        if (i % 2 == 1) {
+          el.style.color = "red";
+        }
+      });
+      // input.value -> input dotorh utgiig haruulna.
+      // input.classList; -> input tagiin classuudiig array dotorh haruulna.
+      // input.classList.add
+      // input.className -> input tagiin classuudiig "" dotor haruulna.
+
+      //   Dasgal ajil 2
+      // 3 ugtei massiviin ugnuudiig towchluur darah uyed randomoor delgetsen deer garj irj bhaar code bich.
+    </script>
+  </body>
+</html>
