@@ -8,7 +8,7 @@
   </head>
   <body>
     <input id="myInput" class="inputt red big" type="text" />
-    <p class="pTag">sdf</p>
+    <p class="pTag pTag1">sdf</p>
     <p class="pTag">df</p>
     <p class="pTag">dd</p>
     <p class="pTag">ff</p>
@@ -16,7 +16,7 @@
     <!-- Дасгал ажил №1 -->
     <!-- Тэкст болон өнгөний input-ийн value-г авч container дотор тухайн өнгө болон тэксттэй шинэ p-таг үүсгэнэ үү-->
     <h3>Dasgal 1</h3>
-    <input id="text" type="text" placeholder="text" />
+    <input id="text" type="text" placeholder="textee oruulna uu?" />
     <input id="color" type="color" />
     <input type="button" value="Insert" onclick="insertTextValue()" />
     <div class="container"></div>
@@ -45,8 +45,24 @@
       // input.classList.add
       // input.className -> input tagiin classuudiig "" dotor haruulna.
 
-      //   Dasgal ajil 2
+      // innerHTML, innerText
+      const pTag1 = document.querySelector(".pTag1");
+      pTag1.innerText = "<em>hello</em>";
+      pTag1.innerHTML = "<em>hello</em>";
+
+      //   Dasgal 1
+      function insertTextValue() {
+        const textInput = document.getElementById("text");
+        const colorInput = document.getElementById("color");
+        const container = document.querySelector(".container");
+        container.innerHTML += `<p style="color: ${colorInput.value}">${textInput.value}</p>`;
+        textInput.value = "";
+      }
+
+      // Dasgal ajil 2
       // 3 ugtei massiviin ugnuudiig towchluur darah uyed randomoor delgetsen deer garj irj bhaar code bich.
+      const arr = ["hi", "hello", "hey"];
+      let index = Math.floor(Math.random() * 3);
     </script>
   </body>
 </html>
