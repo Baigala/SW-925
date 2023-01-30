@@ -20,6 +20,9 @@
     <input id="color" type="color" />
     <input type="button" value="Insert" onclick="insertTextValue()" />
     <div class="container"></div>
+    <br />
+    <button id="button111">Click</button>
+    <div id="aaa"></div>
     <script>
       // getElementById(), querySelector(), querySelectorAll()
       // tagiig const tulhuur ug ashiglaj zarlasan huwisagchin dotor hadgalna.
@@ -61,8 +64,15 @@
 
       // Dasgal ajil 2
       // 3 ugtei massiviin ugnuudiig towchluur darah uyed randomoor delgetsen deer garj irj bhaar code bich.
-      const arr = ["hi", "hello", "hey"];
-      let index = Math.floor(Math.random() * 3);
+
+      const btn = document.getElementById("button111");
+
+      btn.addEventListener("click", () => {
+        const container = document.getElementById("aaa");
+        const arr = ["hi", "hello", "hey"];
+        let index = Math.floor(Math.random() * 3);
+        container.innerText = arr[index];
+      });
     </script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="title">Hi</h2>
+    <script>
+      // beforebegin - before element
+      // afterbegin - first child
+      // beforeend - last child
+      // afterend - after element
+      const myTitle = document.getElementById("title");
+
+      // setTimeOut function
+      setTimeout(function () {
+        myTitle.insertAdjacentHTML(
+          "afterend",
+          `<span style="color: red">span</span>`
+        );
+      }, 2000);
+      // setInterval function
+      let myInterval = setInterval(function () {
+        myTitle.insertAdjacentHTML(
+          "beforebegin",
+          `<span style="color: green">span</span>`
+        );
+      }, 2000);
+      // zogsooh
+      //   clearInterval(myInterval);
+
+      // Гэрт:
+      // 00:00:00
+    </script>
+  </body>
+</html>
