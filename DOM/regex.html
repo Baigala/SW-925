@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style></style>
+  </head>
+  <body class="w-full h-screen flex justify-center items-center bg-gray-100">
+    <div class="bg-white rounded-xl p-4 flex flex-col">
+      <label>Password</label>
+      <input
+        class="py-3 px-4 rounded-xl bg-gray-100 mb-4"
+        type="text"
+        id="input"
+      />
+      <p class="text-red-400 requirement" id="pTag1">Жижиг үсэг орсон байх</p>
+      <p class="text-red-400 requirement" id="pTag2">Том үсэг орсон байх</p>
+      <p class="text-red-400 requirement" id="pTag3">Тоо орсон байх</p>
+      <p class="text-red-400 requirement" id="pTag4">
+        Тэмдэгт орсон байх - !@#$%^&*
+      </p>
+      <p class="text-red-400 requirement" id="pTag5">
+        Хамгийн багадаа 8 тэмдэгт орсон байх
+      </p>
+    </div>
+    <script>
+      // test болон match functions
+      // regExp.test(sentence); : boolean.
+      // sentence.match(regExp) : obj | array; 1 ширхэг өгөгдөл байвал object таарж байгаа бүх өгөгдлийг буцаахаар бол array буцаана.
+      //
+      // g - таарч буй бүх элементийг массив болгон буцаана.
+      // i - ignore the case том жижиг үсгийн ялгааг арилгана.
+      // \d - [0-9] - тоонуудыг илэрхийлнэ.
+      // \D - тооноос бусад тэмдэгтийг авна [^0-9]
+      // \w - стринг илэрхийлнэ. [a-zA-Z]
+      // \W - тэмдэгтүүдийг илэрхийлнэ /[^a-zA-Z0-9_]/.
+      // _ тэмдэгт нь special charactarдаа ордоггүй \W гэж хайх үед гарж ирэхгүй.
+      // \s - white space зайг илэрхийлнэ.
+      // \S - white space-с бусад - [^ ]
+      // ^a - carret юугаар эхлэхийг зааж өгнө.
+      // $ tosgoliig zaana.
+      // [^d] алгасна.
+      // {5, 10} - 5-с 10 хооронд, {5} 5 урттай, {,10} - хамгийн ихдээ 10 урттай
+      // | or
+      // const sentence =
+      //   "Hi, my nameaaaaa is Gizmo .Heey .G I am a fat hat ceaaaat cat. I study in indra institute is blad is is 235245";
+      // const regex1 = /i/gi;
+      // const regex2 = /\d/g; // global // too bga esehiig shalgah regex
+      // const regex3 = /e+/g;
+      // const regex4 = /ea*/g;
+      // const regex5 = /.d/g;
+      // const regex6 = /a../g;
+      // const regex7 = /\.G|\.H/g; // цэг \ -> scape operator
+      // const regex8 = /[fch]at/g;
+      // const regex9 = /bla|nin|in./gi;
+      // const regex10 = /\b[A-Z]/;
+      // const regex11 = /ea?/g;
+      // const regex12 = /\w{4}/g;
+
+      // const found = sentence.match(regex8);
+      // console.log(found);
+      // const testing = regex2.test(sentence);
+      // console.log(testing);
+
+      // var num = "12/16/2022";
+      // console.log(num.replace(/\//g, "-"));
+
+      // const input = document.querySelector("#input");
+      // const ptags = document.querySelectorAll(".requirement");
+      // input.addEventListener("input", function () {
+      //   var regEx = [/[a-z]/, /[A-Z]/, /\d/, /\W/, /.{8,}/];
+      //   regEx.forEach((rxp, index) => {
+      //     if (rxp.test(input.value)) {
+      //       ptags[index].classList.remove("text-red-400");
+      //       ptags[index].classList.add("text-gray-400");
+      //       ptags[index].classList.add("line-through");
+      //     } else {
+      //       ptags[index].classList.add("text-red-400");
+      //       ptags[index].classList.remove("text-gray-400");
+      //       ptags[index].classList.remove("line-through");
+      //     }
+      //   });
+
+      //   var regExpGeneral = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)(?=.{8,})/;
+      //   if (regExpGeneral.test(input.value)) {
+      //     console.log(true);
+      //   }
+      // });
+
+      //
+      let inputTag = document.getElementById("input");
+      const pTag1 = document.getElementById("pTag1");
+      inputTag.addEventListener("input", () => {
+        const regexP1 = /[a-z]/;
+        // console.log(inputTag.value);
+        if (regexP1.test(inputTag.value) == true) {
+          pTag1.classList.remove("text-red-400");
+          pTag1.classList.add("text-gray-400");
+          pTag1.classList.add("line-through");
+        } else {
+          pTag1.classList.add("text-red-400");
+          pTag1.classList.remove("text-gray-400");
+          pTag1.classList.remove("line-through");
+        }
+      });
+    </script>
+  </body>
+</html>
