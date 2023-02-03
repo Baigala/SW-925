@@ -53,6 +53,7 @@ talbai = PiToo * r * r;
 // } else {
 //   // false
 // }
+//
 // herwee 18-s doosh nasnii hun bol console-d huuhed gej hewlene. 18s deesh bol tom hun gej hewlene.
 // var nas = +prompt("Nasaa oruulna uu?");
 // if (nas <= 18) {
@@ -458,18 +459,18 @@ function dasgal11(arr, index) {
 // object
 // string, number, object, function
 // this - zaagch shiree.une === this.une
-// var shiree = {
-//   ongo: "tsagaan",
-//   une: 150000,
-//   hemjee: {
-//     ondor: "1m",
-//     orgon: "50cm",
-//   },
-//   hayag: "BGD bla bla",
-//   taniltsuulga() {
-//     console.log(this.une + " unetei shiree bna.");
-//   },
-// };
+var shiree = {
+  ongo: "tsagaan",
+  une: 150000,
+  hemjee: {
+    ondor: "1m",
+    orgon: "50cm",
+  },
+  hayag: "BGD bla bla",
+  taniltsuulga() {
+    console.log(this.une + " unetei shiree bna.");
+  },
+};
 // console.log("Bi " + shiree.ongo + " ongotoi shiree awlaa.");
 // console.log(shiree.hemjee.orgon);
 // shiree.taniltsuulga();
@@ -716,7 +717,7 @@ console.log(arr2);
 // forEach
 const arr3 = ["a", "b", "c"];
 
-arr3.forEach(function (element) {
+arr3.forEach((element) => {
   if (element == "a") {
     console.log(element);
   }
@@ -804,3 +805,5 @@ console.log(ongotoiToirog);
 // Classes;
 // Promise;
 // Module
+
+// var, datatype, if statement, for loop, array, object, function, huwisagch zarlah uyed let, const, backtik, arrow function, forEach, map, object destructuring, Spread Operator, selectors, tagiin style ruu handah, classList, onclick="click hiih ueyd ajilluulah function", addEventListener, innerText, innerHTML, setTimeout, setInterval, insertAdjacentHTML, clearInterval
