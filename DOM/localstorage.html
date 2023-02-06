@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // localstorage
+      // setItem("key", "value");
+      localStorage.setItem("dog", "Spike");
+      localStorage.setItem("a", "Spike");
+      localStorage.setItem("b", "Spike");
+      localStorage.setItem("cat", "Gizmo");
+      // removeItem("key");
+      localStorage.removeItem("cat");
+      // clear() - buh datag ustgah
+      // JSON.stringify()
+      const arr = [1, 2, 3, 4];
+      const stringArr = JSON.stringify(arr);
+      const obj = { a: 1, b: 2, c: 3 };
+      const stringObj = JSON.stringify(obj);
+      localStorage.setItem("massiv1", stringArr);
+      localStorage.setItem("massiv2", stringObj);
+      // getItem()
+      const objFromLocalstorage = localStorage.getItem("massiv2");
+      // JSON.parse()
+      const obj3 = JSON.parse(objFromLocalstorage);
+    </script>
+  </body>
+</html>
